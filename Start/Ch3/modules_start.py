@@ -2,12 +2,16 @@
 # Working with modules of code
 
 # import the math module, which contains features for working with mathematics
-
+import math
+print("the square root in 16 is " , math.sqrt(16))
 
 # import a specific part of the module so you can refer to it more easily
-
+from math import pi
+print("Pi is " , pi) 
 
 # import a module and give it a different name
+import random as rn
+print(rn.randint(1, 100))  # Generates a random number between 1 and 10
 
 
 # the math module contains lots of pre-built functions
@@ -22,7 +26,7 @@
 # try some of the math functions for yourself here:
 
 # Use the 3rd party tabulate module to print tabulated data:
-
+from tabulate import tabulate
 # Sample data
 data = [
   ["Product", "Price", "Stock"],
@@ -30,5 +34,5 @@ data = [
   ["Mouse", 24.99, 128],
   ["Keyboard", 59.99, 89]
 ]
-
 # Create a formatted table
+print(tabulate(data, headers="firstrow", tablefmt="fancy_grid"))
